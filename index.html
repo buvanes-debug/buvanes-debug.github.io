@@ -1,155 +1,82 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FFIMS Supervisor Dashboard - Sidney Buvane</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja de Joias</title>
     <style>
-      /* Sua dashbords.css completa aqui - copie da resposta anterior */
-      :root {
-        --bg-primary: #ffffff;
-        --bg-secondary: #f9fafb;
-        --text-primary: #111827;
-        --text-secondary: #6b7280;
-        --accent: #3b82f6;
-        --card-bg: #ffffff;
-        --border: #e5e7eb;
-        --shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
-      }
-      .dark {
-        --bg-primary: #0f172a;
-        --bg-secondary: #1e293b;
-        --text-primary: #f1f5f9;
-        --text-secondary: #94a3b8;
-        --accent: #60a5fa;
-        --card-bg: #1e293b;
-        --border: #334155;
-        --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-      }
-      /* ... Cole TODO o CSS da resposta anterior aqui ... */
-      /* (stats-grid, cards, tasks, progress, badges, etc.) */
-      
-      /* Landing adicional */
-      .landing-hero {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-        color: white;
-        padding: 2rem;
-      }
-      .launch-btn {
-        background: rgba(255,255,255,0.2);
-        border: 2px solid rgba(255,255,255,0.4);
-        color: white;
-        padding: 1rem 2.5rem;
-        border-radius: 50px;
-        font-size: 1.2rem;
-        font-weight: 600;
-        cursor: pointer;
-        margin-top: 2rem;
-        transition: all 0.3s;
-      }
-      .launch-btn:hover { background: rgba(255,255,255,0.3); transform: scale(1.05); }
-      .hidden { display: none !important; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdfdfd;
+            color: #333;
+        }
+        header {
+            background-color: #b8860b;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem;
+            text-align: center;
+        }
+        main h2 {
+            color: #b8860b;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background-color: #b8860b;
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #8b6508;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #f1f1f1;
+            margin-top: 3rem;
+        }
     </style>
-  </head>
-  <body>
-    <!-- Landing Page -->
-    <div id="landing" class="landing-hero">
-      <h1 style="font-size: 4rem; margin-bottom: 1rem;">🚀 FFIMS</h1>
-      <p style="font-size: 1.5rem; margin-bottom: 2rem; max-width: 600px;">
-        Dashboard Supervisor para Facilities Management
-      </p>
-      <button class="launch-btn" onclick="showDashboard()">
-        <i class="fas fa-rocket"></i> Abrir Dashboard
-      </button>
-      <p style="margin-top: 3rem; opacity: 0.8;">
-        Sidney Buvane | CS 3.1 | Harare 2026
-      </p>
-    </div>
+</head>
+<body>
+    <header>
+        <h1>NG Joias</h1>
+        <p>Beleza e exclusividade em cada detalhe ✨</p>
+    </header>
 
-    <!-- Seu Dashboard (escondido inicialmente) -->
-    <div id="dashboard" class="supervisor-page hidden">
-      <!-- Cole TODO o HTML da sua dashboard.jsx aqui como HTML puro -->
-      <header class="topbar">
-        <div>
-          <p class="eyebrow">FFIMS</p>
-          <h1>Supervisor Dashboard</h1>
-          <p class="subtitle">Monitor tasks • April 6, 2026</p>
-        </div>
-        <div class="header-actions">
-          <button class="action-btn" onclick="alert('New task!')">
-            + New Task
-          </button>
-          <button class="theme-toggle action-btn" onclick="toggleTheme()" title="Toggle theme">
-            🌙
-          </button>
-        </div>
-      </header>
+    <main>
+        <h2>Bem-vindo(a) à nossa loja!</h2>
+        <p>
+            A <strong>NG Joias</strong> nasceu com a missão de oferecer elegância, sofisticação e qualidade em cada peça. 
+            Aqui você encontra joias únicas que refletem beleza, estilo e exclusividade.
+        </p>
+        <p>
+            Trabalhamos com materiais de alta qualidade e design moderno, para que cada cliente brilhe em todos os momentos especiais.
+        </p>
 
-      <section class="stats-grid">
-        <div class="card stat-card">
-          <p>Tasks Completed</p>
-          <h2>75%</h2>
-          <span>Up 8% from last week</span>
-        </div>
-        <div class="card stat-card">
-          <p>Team Online</p>
-          <h2>8/12</h2>
-          <span>3 on break, 1 absent</span>
-        </div>
-        <div class="card stat-card">
-          <p>Overdue Tasks</p>
-          <h2>3</h2>
-          <span>Needs attention today</span>
-        </div>
-        <div class="card stat-card">
-          <p>Active Projects</p>
-          <h2>5</h2>
-          <span>2 due this week</span>
-        </div>
-      </section>
+        <a href="prototipo.html" class="btn">Ver Produtos</a>
+    </main>
 
-      <!-- Tasks + Team + Progress (copie o resto do seu JSX como HTML) -->
-      <section class="content-grid">
-        <div class="card panel">
-          <h3>Today's Tasks</h3>
-          <div class="task-list">
-            <div class="task-item">
-              <div>
-                <strong>Inspect Building A lighting</strong>
-                <p>John • Due Today</p>
-              </div>
-              <span class="badge in-progress">In Progress</span>
-            </div>
-            <!-- Mais tasks... -->
-          </div>
-        </div>
-        <!-- Team section... -->
-      </section>
-    </div>
-
-    <script>
-      function showDashboard() {
-        document.getElementById('landing').classList.add('hidden');
-        document.getElementById('dashboard').classList.remove('hidden');
-      }
-      
-      function toggleTheme() {
-        document.documentElement.classList.toggle('dark');
-      }
-      
-      // Auto dark mode
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.documentElement.classList.add('dark');
-      }
-    </script>
-  </body>
+    <footer>
+        <p>&copy; 2025 NG Joias. Todos os direitos reservados.</p>
+    </footer>
+</body>
 </html>
