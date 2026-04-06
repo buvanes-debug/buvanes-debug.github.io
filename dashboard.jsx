@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./dashboards.css";
+import "./dashbords.css";
 
 const stats = [
   { label: "Tasks Completed", value: "75%", note: "Up 8% from last week" },
@@ -25,7 +25,6 @@ export default function Dashboards() {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    // Check system preference
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     setIsDark(prefersDark);
   }, []);
@@ -42,7 +41,7 @@ export default function Dashboards() {
           <p className="eyebrow">FFIMS</p>
           <h1>Supervisor Dashboard</h1>
           <p className="subtitle">
-            Monitor tasks, team performance, and project progress • 31 Mar 2026
+            Monitor tasks, team performance, and project progress • April 6, 2026
           </p>
         </div>
         <div className="header-actions">
